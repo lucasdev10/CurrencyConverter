@@ -1,0 +1,20 @@
+<h1 class="title"> Currency Converter </h1>
+
+
+
+<div class="cont">
+     <input (click)="btnLibra($event)" id="btnLibra" type="button" class="btnConverter"  value="£">
+     <input (click)="btnDolar($event)" id="btnDolar" type="button" class="btnConverter" value="$">
+     <input (click)="btnEuro($event)" id="btnEuro" type="button" class="btnConverter" value="€">
+     <input (click)="btnYen($event)" id="btnYen" type="button" class="btnConverter" value="¥">
+</div>
+
+
+<div class="forms">
+<form class="form">
+     <label for="fname">{{ initials }}</label>
+     <input  (keyup)="saveValue($event)" class="form1" type="text" id="fname" name="fname" value="{{ result1 | currency }}">
+     <label for="lname">BRL: </label>
+     <input  (keyup)="saveValue1($event)" class="form1" type="text" id="lname" name="lname" value=" {{ result | currency: 'R$' }}">
+</form>
+</div>

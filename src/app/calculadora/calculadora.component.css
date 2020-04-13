@@ -1,0 +1,45 @@
+
+.title {
+  font-size: 50px;
+  justify-content: center;
+  height: 200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif ;
+  color: rgb(255, 255, 255);
+}
+
+.cont{
+    margin: 0 auto;
+    width: 550px;
+    justify-content: center;
+    display: flex;
+    height: 280px;
+}
+.btnConverter {
+  background-color:  rgb(0, 0, 0);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-decoration: none;
+  font-size: 70px;
+  cursor: pointer;
+  border-radius: 55%;
+  height: 150px;
+  width: 110px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  height: 45px;
+  width: 48%;
+}
+.form1 {
+  border-radius: 18%;
+}
+
