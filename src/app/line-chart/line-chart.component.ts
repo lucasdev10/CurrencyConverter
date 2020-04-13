@@ -26,8 +26,8 @@ export class LineChartComponent implements OnInit {
 
   lineChartColors: Color[] = [
     {
-      borderColor: 'black',
-      backgroundColor: 'rgba(255,255,0,0.28)',
+      borderColor: 'white',
+      backgroundColor: 'white',
     },
   ];
 
