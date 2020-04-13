@@ -8,8 +8,10 @@ const apiUrl = "https://api.exchangeratesapi.io/latest?base=";
 })
 export class ApiService {
 
+  public base:any;
+
   constructor(private http: HttpClient) { }
-    getCurrency(base) {
-      return this.http.get(apiUrl + base);
+    getCurrency() {
+      return this.http.get(apiUrl + this.base);
     }
 }

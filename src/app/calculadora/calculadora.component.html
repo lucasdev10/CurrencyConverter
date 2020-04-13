@@ -3,18 +3,24 @@
 
 
 <div class="cont">
-     <input (click)="btnLibra($event)" id="btnLibra" type="button" class="btnConverter"  value="£">
-     <input (click)="btnDolar($event)" id="btnDolar" type="button" class="btnConverter" value="$">
-     <input (click)="btnEuro($event)" id="btnEuro" type="button" class="btnConverter" value="€">
-     <input (click)="btnYen($event)" id="btnYen" type="button" class="btnConverter" value="¥">
+     <input (click)="calcula($event)" title="GBP" id="btnLibra" type="button" class="btnConverter" value="£">
+     <input (click)="calcula($event)" title="USD" id="btnDolar" type="button" class="btnConverter" value="$">
+     <input (click)="calcula($event)" title="EUR" id="btnEuro" type="button" class="btnConverter" value="€">
+     <input (click)="calcula($event)" title="JPY" id="btnYen" type="button" class="btnConverter" value="¥">
 </div>
+<div class="test">
+    <p>{{valores[0] | currency }}</p> 
+    <p>{{valores[1] | currency }}</p>
+    <p>{{valores[2] | currency }}</p>
+    <p>{{valores[3] | currency }}</p>
+</div><br>
 
 
 <div class="forms">
-<form class="form">
-     <label for="fname">{{ initials }}</label>
-     <input  (keyup)="saveValue($event)" class="form1" type="text" id="fname" name="fname" value="{{ result1 | currency }}">
-     <label for="lname">BRL: </label>
-     <input  (keyup)="saveValue1($event)" class="form1" type="text" id="lname" name="lname" value=" {{ result | currency: 'R$' }}">
-</form>
+     <form class="form">
+          <label for="fname">{{ initials }}</label>
+          <input (keyup)="saveValue($event)" class="form1" type="text" id="fname" name="fname" value="{{ resultReverse | currency }}">
+          <label for="lname">BRL: </label>
+          <input (keyup)="saveValueReverse($event)" class="form1" type="text" id="lname" name="lname" value=" {{ result | currency: 'R$' }}">
+     </form>
 </div>
