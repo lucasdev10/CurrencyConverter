@@ -1,4 +1,7 @@
-
+<div>
+    <p (click)="chamaBase($event, chart)" title="USD">Gráfico do Dólar</p>
+    <p (click)="chamaBase($event, chart)" title="EUR">Gráfico do Euro</p>
+</div>
 <div class="chart-wrapper">
     <canvas baseChart 
         [datasets]="lineChartData" 

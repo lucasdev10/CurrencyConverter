@@ -7,7 +7,7 @@ import { ApiService } from './../api.service';
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.css']
 })
-//teste
+
 export class CalculadoraComponent implements OnInit {
 
   constructor(private api: ApiService) { }
@@ -19,9 +19,9 @@ export class CalculadoraComponent implements OnInit {
   valueCurrency: number;
   initials: string = "$:";
   guardaData: any;
-
   bases = ['GBP', 'USD', 'EUR', 'JPY'];
   valores = []
+
   ngOnInit() {
     for (let i in this.bases) {
       this.api.base = this.bases[i]
