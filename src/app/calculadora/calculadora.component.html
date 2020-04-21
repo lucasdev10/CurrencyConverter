@@ -9,18 +9,22 @@
      <input (click)="calcula($event)" title="JPY" id="btnYen" type="button" class="btnConverter" value="¥">
 </div>
 <div class="test">
-    <p>{{valores[0] | currency }}</p> 
-    <p>{{valores[1] | currency }}</p>
-    <p>{{valores[2] | currency }}</p>
-    <p>{{valores[3] | currency }}</p>
+     <p>{{valores[0] | currency }}</p>
+     <p>{{valores[1] | currency }}</p>
+     <p>{{valores[2] | currency }}</p>
+     <p>{{valores[3] | currency }}</p>
 </div><br>
+
 
 
 <div class="forms">
      <form class="form">
           <label for="fname">{{ initials }}</label>
-          <input (keyup)="saveValue($event)" class="form1" type="text" id="fname" name="fname" value="{{ resultReverse | currency }}">
+          <input (keyup)="saveValue($event)" class="form1" type="text" id="fname" name="fname"
+               value="{{ resultReverse | currency }}">
           <label for="lname">BRL: </label>
-          <input (keyup)="saveValueReverse($event)" class="form1" type="text" id="lname" name="lname" value=" {{ result | currency: 'R$' }}">
+          <input (keyup)="saveValueReverse($event)" class="form1" type="text" id="lname" name="lname"
+               value=" {{ result | currency: 'R$' }}">
      </form>
 </div>
+

@@ -14,7 +14,7 @@ export class ApiService {
 
   public base:any;
   public dates:any;
-  public baseApi:string;
+  public baseApi:any;
 
   constructor(private http: HttpClient) { }
     getCurrency() {

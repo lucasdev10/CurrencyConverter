@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ChartDataSets } from 'chart.js';
-import { Color, Label } from 'ng2-charts';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ApiService } from './../api.service';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-line-chart',
@@ -11,84 +10,101 @@ import { ApiService } from './../api.service';
 export class LineChartComponent implements OnInit {
 
   guardaHistorico: any;
-  valorHistorico = [];
-  dataHistorico = ["2020-04-18", "2020-04-17", "2020-04-16", "2020-04-15", "2020-04-14"]
+
+  valorHistorico1 = [];
+  valorHistorico2 = [];
+  valorHistorico3 = [];
+  valorHistorico4 = [];
+
+  // dataHistorico = ["2020-04-18", "2020-04-17", "2020-04-16", "2020-04-15", "2020-04-14"]
+  bases = ['GBP', 'USD', 'EUR', 'JPY'];
 
   constructor(private api: ApiService) { }
 
-  ngOnInit() {
-    // this.api.baseApi = "USD"
-    // for (let i = 0; i < 10; i++) {
-    //   let count 
-      
-    //   let d = new Date(),
-    //     month = '' + (d.getMonth()),
-    //     day = '' + (d.getDate()-i),
-    //     year = d.getFullYear();
+  @ViewChild("meuCanvas", { static: true }) elemento: ElementRef;
 
-    //   if (month.length < 2) {
-    //     month = '0' + month;
-    //   }
-    //   if (day.length < 2) {
-    //     day = '0' + day;
-    //   }
-    //   console.log([year, month, day])
-    //   this.api.dates = [year, month, day].join('-')
-    //   this.api.getHistoy().subscribe((resposta)=>{
-    //     this.guardaHistorico = resposta;
-    //     this.valorHistorico.reverse()[i] = this.guardaHistorico.rates.BRL;
-    //     console.log(this.valorHistorico)
-    //   })
-    // }
+  graph(parametro, outroParametro) {
+    for (let j = 0; j <= 3; j++) {
+      this.api.baseApi = parametro;
+      for (let i = 0; i < 10; i++) {
+        let count
 
-  }
+        let d = new Date(),
+          month = '' + (d.getMonth()),
+          day = '' + (d.getDate() - i),
+          year = d.getFullYear();
 
-  chamaBase(event, chart){
-    this.api.baseApi = event.target.title
-    for (let i = 0; i < 10; i++) {
-      let count 
-      
-      let d = new Date(),
-        month = '' + (d.getMonth()),
-        day = '' + (d.getDate()-i),
-        year = d.getFullYear();
+        if (month.length < 2) {
+          month = '0' + month;
+        }
+        if (day.length < 2) {
+          day = '0' + day;
+        }
+        // console.log([year, month, day])
+        this.api.dates = [year, month, day].join('-')
+        this.api.getHistoy().subscribe((resposta) => {
+          this.guardaHistorico = resposta;
+          outroParametro.reverse()[i] = this.guardaHistorico.rates.BRL;
+          console.log(this.valorHistorico1)
 
-      if (month.length < 2) {
-        month = '0' + month;
+        })
+
       }
-      if (day.length < 2) {
-        day = '0' + day;
-      }
-      console.log([year, month, day])
-      this.api.dates = [year, month, day].join('-')
-      this.api.getHistoy().subscribe((resposta)=>{
-        this.guardaHistorico = resposta;
-        this.valorHistorico.reverse()[i] = this.guardaHistorico.rates.BRL;
-        console.log(this.valorHistorico)
-      })
     }
-    
   }
+  func() {
+    this.graph("GBP", this.valorHistorico1);
+    this.graph("USD", this.valorHistorico2);
+    this.graph("EUR", this.valorHistorico3);
+    this.graph("JPY", this.valorHistorico4);
+  }
+  ngOnInit() {
 
-  lineChartData: ChartDataSets[] = [
-    { data: this.valorHistorico, label: 'Currency History' },
-  ];
+    this.func();
 
-  lineChartLabels: Label[] = ['1', '2', '3', '4', '5','6','7','8','9','10'];
+    new Chart(this.elemento.nativeElement, {
+      type: 'line',
+      data: {
+        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        datasets: [
+          {
+            label: 'GPB',
+            data: this.valorHistorico1,
+            borderColor: 'rgb(0, 0, 0)',
+            borderWidth: 5,
+            fill: false
+          }, {
+            label: 'USD',
+            data: this.valorHistorico2,
+            borderColor: 'rgb(13, 16, 212)',
+            borderWidth: 5,
+            fill: false
+          },
+          {
+            label: 'EUR',
+            data: this.valorHistorico3,
+            borderColor: 'rgb(173, 13, 13)',
+            borderWidth: 5,
+            fill: false
+          },
+          {
+            label: 'JPY',
+            data: this.valorHistorico4,
+            borderColor: 'rgb(1, 95, 17)',
+            borderWidth: 5,
+            fill: false
+          }
+        ]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontSize: 23,
+            fontColor: '#000',
+          }
+        },
 
-  lineChartOptions = {
-    responsive: true,
-  };
-
-  lineChartColors: Color[] = [
-    {
-      borderColor: 'black',
-      backgroundColor: 'gray',
-    },
-  ];
-
-  lineChartLegend = true;
-  lineChartPlugins = [];
-  lineChartType = 'line';
-
+      }
+    });
+  }
 }

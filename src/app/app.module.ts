@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { LineChartComponent } from './line-chart/line-chart.component';
-import { ChartsModule } from 'ng2-charts';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ChartsModule } from 'ng2-charts';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ChartsModule
+
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

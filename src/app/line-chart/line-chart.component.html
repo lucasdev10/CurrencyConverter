@@ -1,15 +1,10 @@
-<div>
-    <p (click)="chamaBase($event, chart)" title="USD">Gráfico do Dólar</p>
-    <p (click)="chamaBase($event, chart)" title="EUR">Gráfico do Euro</p>
-</div>
+<!-- <div>
+    <p (click)="chamaBase($event )" title="USD">Gráfico do Dólar</p>
+    <p (click)="chamaBase($event )" title="EUR">Gráfico do Euro</p>
+</div> -->
+
+<!-- <input type="button" (click)="carregarGrafico($event)" value="Carregar Gráficos"> -->
+
 <div class="chart-wrapper">
-    <canvas baseChart 
-        [datasets]="lineChartData" 
-        [labels]="lineChartLabels" 
-        [options]="lineChartOptions"
-        [colors]="lineChartColors" 
-        [legend]="lineChartLegend" 
-        [chartType]="lineChartType" 
-        [plugins]="lineChartPlugins">
-    </canvas>
+    <canvas id="meuCanvas" #meuCanvas></canvas>
 </div>
