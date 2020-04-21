@@ -1,8 +1,15 @@
+.title {
+    text-align: center;
+    margin: 40px auto 0 auto;
+    /* text-decoration: underline; */
+    color: white;
+}
+
 .chart-wrapper{
     width: 60%;
     display: flex;
     justify-content: center;
-    margin: 50px auto 40px auto;
+    margin: -8px auto 40px auto;
     background-color: white;
     border-radius: 2%;
 }

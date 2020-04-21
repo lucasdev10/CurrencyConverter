@@ -71,28 +71,32 @@ export class LineChartComponent implements OnInit {
             label: 'GPB',
             data: this.valorHistorico1,
             borderColor: 'rgb(0, 0, 0)',
+            backgroundColor: 'rgb(71, 69, 66)',
             borderWidth: 5,
-            fill: false
+            // fill: false
           }, {
             label: 'USD',
             data: this.valorHistorico2,
             borderColor: 'rgb(13, 16, 212)',
+            backgroundColor: 'rgb(52, 44, 121)',
             borderWidth: 5,
-            fill: false
+            // fill: false
           },
           {
             label: 'EUR',
             data: this.valorHistorico3,
             borderColor: 'rgb(173, 13, 13)',
+            backgroundColor: 'rgb(172, 67, 67)',
             borderWidth: 5,
-            fill: false
+            // fill: false
           },
           {
             label: 'JPY',
             data: this.valorHistorico4,
             borderColor: 'rgb(1, 95, 17)',
+            backgroundColor: 'rgb(55, 155, 77)',
             borderWidth: 5,
-            fill: false
+            // fill: false
           }
         ]
       },

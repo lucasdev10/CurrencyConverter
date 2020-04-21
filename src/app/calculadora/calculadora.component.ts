@@ -9,8 +9,10 @@ import { ApiService } from './../api.service';
 })
 
 export class CalculadoraComponent implements OnInit {
-
+ 
   constructor(private api: ApiService) { }
+
+ 
 
   valueInput: number;
   valueInputReverse: number;
