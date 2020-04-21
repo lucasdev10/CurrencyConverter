@@ -3,7 +3,7 @@
   font-size: 50px;
   justify-content: center;
   height: 10%;
-  margin: 0 auto 50px;
+  margin: 0 auto 70px;
   font-family: Arial, sans-serif ;
   color: rgb(255, 255, 255);
   width: 100%;
@@ -20,15 +20,16 @@
 .test{
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: -35px auto 18px auto;
   width: 100%;
 }
 .test p{
-  border-radius: 20%;
+  /* border-radius: 20%; */
   background-color: rgb(0, 0, 0);
-  font-size: 20px;
+  font-size: 18px;
   color: cornsilk;
-  margin: 0 57px;
+  margin: 0 59px;
+  text-decoration: underline;
 }
 .btnConverter {
   background-color:  rgb(0, 0, 0);
@@ -36,7 +37,7 @@
   color: rgb(255, 255, 255);
   padding: 16px;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 55px;
   cursor: pointer;
   border-radius: 50%;
   height: 150px;
@@ -59,7 +60,7 @@
   border-radius: 18%;
 } */
 
-.forms{
+/* .forms{
   margin: 0 auto;
     justify-content: center;
     display: flex;
@@ -69,8 +70,73 @@
 
 .form label{
   color: white;
-}
-
+} */
 
 /* ----------------------------------- */
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 25%;
+  margin: auto;
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #b37c34, #7e0505);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: white;
+  font-weight: 700;
+}
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+/* demo */
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color: #222222;
+}
 

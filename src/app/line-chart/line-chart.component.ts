@@ -26,7 +26,7 @@ export class LineChartComponent implements OnInit {
   graph(parametro, outroParametro) {
     for (let j = 0; j <= 3; j++) {
       this.api.baseApi = parametro;
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 15; i++) {
         let count
 
         let d = new Date(),
@@ -65,7 +65,7 @@ export class LineChartComponent implements OnInit {
     new Chart(this.elemento.nativeElement, {
       type: 'line',
       data: {
-        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11","12","13","14","15"],
         datasets: [
           {
             label: 'GPB',

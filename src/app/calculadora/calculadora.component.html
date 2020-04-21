@@ -16,15 +16,13 @@
 </div><br>
 
 
-
-<div class="forms">
-     <form class="form">
-          <label for="fname">{{ initials }}</label>
-          <input (keyup)="saveValue($event)" class="form1" type="text" id="fname" name="fname"
-               value="{{ resultReverse | currency }}">
-          <label for="lname">BRL: </label>
-          <input (keyup)="saveValueReverse($event)" class="form1" type="text" id="lname" name="lname"
-               value=" {{ result | currency: 'R$' }}">
-     </form>
+<div class="form__group field">
+     <input (keyup)="saveValue($event)" type="text" class="form__field" value="{{ resultReverse | currency }}"
+          placeholder="Name" name="names" id='names' required />
+     <label for="names" class="form__label">{{ initials }}</label>
+</div><br>
+<div class="form__group field">
+     <input (keyup)="saveValueReverse($event)" type="text" class="form__field" value="{{ result | currency: 'R$' }}"
+          placeholder="Name" name="name" id='name' required />
+     <label for="name" class="form__label">BRL:</label>
 </div>
-
