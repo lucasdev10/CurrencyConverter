@@ -9,25 +9,71 @@ import { Chart } from 'chart.js';
 })
 export class LineChartComponent implements OnInit {
 
-  guardaHistorico: any;
+  historicalGuard: any;
+  historicValueOne: any = [];
+  historicValueTwo: any = [];
+  historicValueThree: any = [];
+  historicValueFour: any = [];
 
-  valorHistorico1 = [];
-  valorHistorico2 = [];
-  valorHistorico3 = [];
-  valorHistorico4 = [];
-
-  // dataHistorico = ["2020-04-18", "2020-04-17", "2020-04-16", "2020-04-15", "2020-04-14"]
   bases = ['GBP', 'USD', 'EUR', 'JPY'];
 
-  constructor(private api: ApiService) { }
+  constructor(private _apiService: ApiService) { }
+
+  ngOnInit() {
+
+    this.getHistoricValues();
+
+    new Chart(this.elemento.nativeElement, {
+      type: 'line',
+      data: {
+        labels: ["1", "2", "3", "4", "5", "6", "7", "8"],
+        datasets: [
+          {
+            label: 'GPB',
+            data: this.historicValueOne,
+            borderColor: 'rgb(0, 0, 0)',
+            backgroundColor: 'rgb(71, 69, 66)',
+            borderWidth: 5,
+          }, {
+            label: 'USD',
+            data: this.historicValueTwo,
+            borderColor: 'rgb(13, 16, 212)',
+            backgroundColor: 'rgb(52, 44, 121)',
+            borderWidth: 5,
+          },
+          {
+            label: 'EUR',
+            data: this.historicValueThree,
+            borderColor: 'rgb(173, 13, 13)',
+            backgroundColor: 'rgb(172, 67, 67)',
+            borderWidth: 5,
+          },
+          {
+            label: 'JPY',
+            data: this.historicValueFour,
+            borderColor: 'rgb(1, 95, 17)',
+            backgroundColor: 'rgb(55, 155, 77)',
+            borderWidth: 5,
+          }
+        ]
+      },
+      options: {
+        legend: {
+          labels: {
+            fontSize: 23,
+            fontColor: '#000',
+          }
+        },
+      }
+    });
+  }
 
   @ViewChild("meuCanvas", { static: true }) elemento: ElementRef;
 
-  graph(parametro, outroParametro) {
+  graphic(baseCurrency, historicValue) {
     for (let j = 0; j <= 3; j++) {
-      this.api.baseApi = parametro;
-      for (let i = 0; i < 15; i++) {
-        let count
+      this._apiService.baseApi = baseCurrency;
+      for (let i = 0; i < 8; i++) {
 
         let d = new Date(),
           month = '' + (d.getMonth()),
@@ -40,75 +86,20 @@ export class LineChartComponent implements OnInit {
         if (day.length < 2) {
           day = '0' + day;
         }
-        // console.log([year, month, day])
-        this.api.dates = [year, month, day].join('-')
-        this.api.getHistoy().subscribe((resposta) => {
-          this.guardaHistorico = resposta;
-          outroParametro.reverse()[i] = this.guardaHistorico.rates.BRL;
-          console.log(this.valorHistorico1)
-
+        this._apiService.dates = [year, month, day].join('-')
+        this._apiService.getHistoy().subscribe((resposta) => {
+          this.historicalGuard = resposta;
+          historicValue.reverse()[i] = this.historicalGuard.rates.BRL;
         })
-
       }
     }
   }
-  func() {
-    this.graph("GBP", this.valorHistorico1);
-    this.graph("USD", this.valorHistorico2);
-    this.graph("EUR", this.valorHistorico3);
-    this.graph("JPY", this.valorHistorico4);
+
+  getHistoricValues() {
+    this.graphic("GBP", this.historicValueOne);
+    this.graphic("USD", this.historicValueTwo);
+    this.graphic("EUR", this.historicValueThree);
+    this.graphic("JPY", this.historicValueFour);
   }
-  ngOnInit() {
 
-    this.func();
-
-    new Chart(this.elemento.nativeElement, {
-      type: 'line',
-      data: {
-        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11","12","13","14","15"],
-        datasets: [
-          {
-            label: 'GPB',
-            data: this.valorHistorico1,
-            borderColor: 'rgb(0, 0, 0)',
-            backgroundColor: 'rgb(71, 69, 66)',
-            borderWidth: 5,
-            // fill: false
-          }, {
-            label: 'USD',
-            data: this.valorHistorico2,
-            borderColor: 'rgb(13, 16, 212)',
-            backgroundColor: 'rgb(52, 44, 121)',
-            borderWidth: 5,
-            // fill: false
-          },
-          {
-            label: 'EUR',
-            data: this.valorHistorico3,
-            borderColor: 'rgb(173, 13, 13)',
-            backgroundColor: 'rgb(172, 67, 67)',
-            borderWidth: 5,
-            // fill: false
-          },
-          {
-            label: 'JPY',
-            data: this.valorHistorico4,
-            borderColor: 'rgb(1, 95, 17)',
-            backgroundColor: 'rgb(55, 155, 77)',
-            borderWidth: 5,
-            // fill: false
-          }
-        ]
-      },
-      options: {
-        legend: {
-          labels: {
-            fontSize: 23,
-            fontColor: '#000',
-          }
-        },
-
-      }
-    });
-  }
 }
