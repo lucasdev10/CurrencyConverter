@@ -1,0 +1,38 @@
+<!-- <div class="lbl-title">
+  <p>Libra</p>
+  <p>Dólar</p>
+  <p>Euro</p>
+  <p>Yen</p>
+</div> -->
+<!-- <div class="cont">
+  <input (click)="calcula($event)" title="GBP" id="btnLibra" type="button" class="btnConverter" value="£">
+  <input (click)="calcula($event)" title="USD" id="btnDolar" type="button" class="btnConverter" value="$">
+  <input (click)="calcula($event)" title="EUR" id="btnEuro" type="button" class="btnConverter" value="€">
+  <input (click)="calcula($event)" title="JPY" id="btnYen" type="button" class="btnConverter" value="¥">
+</div> -->
+
+
+
+<div class="container">
+  <div class="currency-option">
+    <img src="../../../assets/images/dolar.svg" alt="dolar" (click)="getValue($event.target.alt)">
+    <div>
+      <h6>DÓLAR</h6>
+      <p>R$ 5.44</p>
+    </div>
+  </div>
+  <div class="currency-option">
+    <img src="../../../assets/images/euro.svg" alt="euro" (click)="getValue($event.target.alt)">
+    <div>
+      <h6>EURO</h6>
+      <p>R$ 6.41</p>
+    </div>
+  </div>
+  <div class="currency-option">
+    <img src="../../../assets/images/libra.svg" alt="libra" (click)="getValue($event.target.alt)">
+    <div>
+      <h6>LIBRA</h6>
+      <p>R$ 7.09</p>
+    </div>
+  </div>
+</div>

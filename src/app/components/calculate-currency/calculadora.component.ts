@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ValueTransformer } from '@angular/compiler/src/util';
-import { ApiService } from './../api.service';
+import { ApiService } from '../../api.service';
 
 @Component({
-  selector: 'app-calculadora',
+  selector: 'app-calculate-currency',
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.css']
 })
@@ -12,8 +12,6 @@ export class CalculadoraComponent implements OnInit {
  
   constructor(private api: ApiService) { }
 
- 
-
   valueInput: number;
   valueInputReverse: number;
   result: number;
@@ -21,7 +19,7 @@ export class CalculadoraComponent implements OnInit {
   valueCurrency: number;
   initials: string = "$:";
   guardaData: any;
-  bases = ['GBP', 'USD', 'EUR', 'JPY'];
+  bases = ['GBP', 'USD', 'EUR'];
   valores = []
 
   ngOnInit() {

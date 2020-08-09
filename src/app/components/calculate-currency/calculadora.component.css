@@ -1,3 +1,7 @@
+.container {
+  margin-bottom: 5rem;
+}
+
 .title {
   font-size: 40px;
   justify-content: center;
@@ -25,7 +29,7 @@
   width: 100%;
 }
 
-.lbl-title  p{
+.lbl-title p {
   font-size: 15px;
   color: cornsilk;
   margin: 0 68px;
@@ -105,10 +109,10 @@
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid #9b9b9b;
+  border-bottom: 2px solid #ffffff;
   outline: 0;
   font-size: 1.3rem;
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -153,7 +157,8 @@
 
 /* reset input */
 
-.form__field:required, .form__field:invalid {
+.form__field:required,
+.form__field:invalid {
   box-shadow: none;
 }
 

@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #ffffff;
+  margin-bottom: 6rem;
+}
+
+.currency-option {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: black;
+  font-weight: bolder;
+}
+
+.currency-option img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+.currency-option img:hover {
+  zoom: 1.2;
+}

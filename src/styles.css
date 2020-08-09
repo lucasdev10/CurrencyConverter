@@ -1,24 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* body {
-    background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.65'%3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-} */
-
 body {
-    /* background:  url(https://www.itforum365.com.br/wp-content/uploads/2018/08/marketplace-finan%C3%A7as-768x507.jpg) ;
-    background-size: cover;
-    background-color: black; */
-    
-    /* background-color: #000000;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.34'%3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover; */
-
-background-color: #120000;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.22'%3E%3Cpolygon fill='%232e0000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23490000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23650000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23800000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%239c0000' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
+  background-color: #120000;
+  background-image: url("./assets/images/background-money.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
