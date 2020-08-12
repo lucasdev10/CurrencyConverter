@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ValueTransformer } from '@angular/compiler/src/util';
-import { ApiService } from '../../api.service';
+import { CurrencyApiService } from '../../currency-api.service';
 
 @Component({
   selector: 'app-calculate-currency',
-  templateUrl: './calculadora.component.html',
-  styleUrls: ['./calculadora.component.css']
+  templateUrl: './calculate-currency.component.html',
+  styleUrls: ['./calculate-currency.component.css']
 })
 
 export class CalculadoraComponent implements OnInit {
- 
-  constructor(private api: ApiService) { }
+
+  constructor(private api: CurrencyApiService) { }
 
   valueInput: number;
   valueInputReverse: number;
@@ -54,13 +54,12 @@ export class CalculadoraComponent implements OnInit {
       }
     )
     switch (eventTitle) {
-      case 'GBP': this.initials = "GBP";
-        break;
       case 'USD': this.initials = "USD";
         break;
       case 'EUR': this.initials = "EUR";
         break;
-      case 'JPY': this.initials = "JPY";
+      case 'GBP': this.initials = "GBP";
+        break;
     }
   }
 

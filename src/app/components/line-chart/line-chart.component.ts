@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ApiService } from '../../api.service';
+import { CurrencyApiService } from '../../currency-api.service';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -17,7 +17,7 @@ export class LineChartComponent implements OnInit {
 
   bases = ['USD', 'GBP', 'EUR'];
 
-  constructor(private _apiService: ApiService) {
+  constructor(private _apiService: CurrencyApiService) {
 
   }
 

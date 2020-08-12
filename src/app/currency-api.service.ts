@@ -8,7 +8,7 @@ const apiHistory = "?base=";
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class CurrencyApiService {
 
   public base: any;
   public dates: any;
