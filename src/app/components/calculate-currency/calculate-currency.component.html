@@ -1,22 +1,5 @@
-<!-- <div class="lbl-title">
-  <p>Libra</p>
-  <p>Dólar</p>
-  <p>Euro</p>
-  <p>Yen</p>
-</div>
-<div class="cont">
-  <input (click)="calcula($event)" title="GBP" id="btnLibra" type="button" class="btnConverter" value="£">
-  <input (click)="calcula($event)" title="USD" id="btnDolar" type="button" class="btnConverter" value="$">
-  <input (click)="calcula($event)" title="EUR" id="btnEuro" type="button" class="btnConverter" value="€">
-  <input (click)="calcula($event)" title="JPY" id="btnYen" type="button" class="btnConverter" value="¥">
-</div> -->
-<!-- <div class="test">
-  <p>{{valores[0] | currency }}</p>
-  <p>{{valores[1] | currency }}</p>
-  <p>{{valores[2] | currency }}</p>
-  <p>{{valores[3] | currency }}</p>
-</div> -->
 <div class="container">
+  <h2>Conversor de moedas</h2>
   <div class="form__group field">
     <input (keyup)="saveValue($event)" type="text" class="form__field" value="{{ resultReverse | currency }}"
       placeholder="Name" name="names" id='names' required />

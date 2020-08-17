@@ -1,5 +1,14 @@
 .container {
   margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container h2{
+  margin: 0 auto;
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .title {

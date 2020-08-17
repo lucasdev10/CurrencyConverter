@@ -3,15 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CalculadoraComponent } from './components/calculate-currency/calculate-currency.component';
+import { CalculateComponent } from './components/calculate-currency/calculate-currency.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { CurrencyOptionsComponent } from './components/currency-options/currency-options.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculadoraComponent,
+    CalculateComponent,
     LineChartComponent,
     CurrencyOptionsComponent
   ],
@@ -19,8 +20,9 @@ import { CurrencyOptionsComponent } from './components/currency-options/currency
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CalculateComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

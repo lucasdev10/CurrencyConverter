@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import { CurrencyApiService } from 'src/app/currency-api.service';
+import { CalculateComponent } from '../calculate-currency/calculate-currency.component';
 
 @Component({
   selector: 'app-currency-options',
@@ -7,12 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrencyOptionsComponent implements OnInit {
 
-  constructor() { }
+  @Output() onFilter: EventEmitter<any> = new EventEmitter();
 
-  ngOnInit(): void { }
+  basesCurrency: any = ['USD', 'EUR', 'GBP'];
+  currencyData: any;
+  currencyValues: any[] = [];
+
+  constructor(
+    private _currencyApiService: CurrencyApiService,
+    public _calculateComponent: CalculateComponent,
+  ) { }
+
+  ngOnInit(): void {
+    for (let i in this.basesCurrency) {
+      this._currencyApiService.baseCurrency = this.basesCurrency[i]
+      this._currencyApiService.getCurrency(this.basesCurrency[i]).subscribe(
+        (result) => {
+          this.currencyData = new Object(result)
+          this.currencyValues.push(this.currencyData.rates.BRL)
+        });
+    }
+  }
 
   getValue(event) {
-    console.log(event);
+    this._currencyApiService.base(event);
   }
 
 }
