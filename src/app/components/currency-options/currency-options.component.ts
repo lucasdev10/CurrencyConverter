@@ -11,7 +11,7 @@ export class CurrencyOptionsComponent implements OnInit {
 
   @Output() onFilter: EventEmitter<any> = new EventEmitter();
 
-  basesCurrency: any = ['USD', 'EUR', 'GBP'];
+  basesCurrency: any = ['USD', 'EUR', 'GBP', 'JPY', 'CAD'];
   currencyData: any;
   currencyValues: any[] = [];
 

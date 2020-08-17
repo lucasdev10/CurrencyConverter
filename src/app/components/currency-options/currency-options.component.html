@@ -2,22 +2,36 @@
   <div class="currency-option">
     <img title="USD" src="../../../assets/images/dolar.svg" alt="dolar" (click)="getValue($event.target.title)">
     <div>
-      <h6>DÓLAR</h6>
+      <h6>Dólar</h6>
       <p>R{{ currencyValues[0] | currency}}</p>
     </div>
   </div>
   <div class="currency-option">
     <img title="EUR" src="../../../assets/images/euro.svg" alt="euro" (click)="getValue($event.target.title)">
     <div>
-      <h6>EURO</h6>
+      <h6>Euro</h6>
       <p>R{{ currencyValues[1] | currency }}</p>
     </div>
   </div>
   <div class="currency-option">
     <img title="GBP" src="../../../assets/images/libra.svg" alt="libra" (click)="getValue($event.target.title)">
     <div>
-      <h6>LIBRA</h6>
+      <h6>Libra</h6>
       <p>R{{ currencyValues[2] | currency }}</p>
+    </div>
+  </div>
+  <div class="currency-option">
+    <img title="JPY" src="../../../assets/images/iene.png" alt="iene" (click)="getValue($event.target.title)">
+    <div>
+      <h6>Iene</h6>
+      <p>R{{ currencyValues[3] | currency }}</p>
+    </div>
+  </div>
+  <div class="currency-option">
+    <img title="CAD" src="../../../assets/images/dolarcanadense.png" alt="dolarCanadense" (click)="getValue($event.target.title)">
+    <div>
+      <h6>Dólar Canadense</h6>
+      <p>R{{ currencyValues[4] | currency }}</p>
     </div>
   </div>
 </div>

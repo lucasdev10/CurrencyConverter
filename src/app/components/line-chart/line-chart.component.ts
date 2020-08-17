@@ -14,8 +14,9 @@ export class LineChartComponent implements OnInit {
   historicValueTwo: any = [];
   historicValueThree: any = [];
   historicValueFour: any = [];
+  historicValueFive: any = [];
 
-  bases = ['USD', 'GBP', 'EUR'];
+  bases = ['USD', 'EUR', 'GBP', 'JPY', 'CAD'];
 
   constructor(private _apiService: CurrencyApiService) {
 
@@ -59,8 +60,10 @@ export class LineChartComponent implements OnInit {
 
   getHistoricValues() {
     this.graphic("USD", this.historicValueOne);
-    this.graphic("GBP", this.historicValueTwo);
-    this.graphic("EUR", this.historicValueThree);
+    this.graphic("EUR", this.historicValueTwo);
+    this.graphic("GBP", this.historicValueThree);
+    this.graphic("JPY", this.historicValueFour);
+    this.graphic("CAD", this.historicValueFive);
   }
 
   chart() {
@@ -87,6 +90,20 @@ export class LineChartComponent implements OnInit {
             data: this.historicValueThree,
             borderColor: 'rgb(173, 13, 13)',
             backgroundColor: 'rgb(172, 67, 67)',
+            borderWidth: 5,
+          },
+          {
+            label: 'Iene',
+            data: this.historicValueFour,
+            borderColor: 'rgb(6, 97, 29)',
+            backgroundColor: 'rgb(12, 131, 42)',
+            borderWidth: 5,
+          },
+          {
+            label: 'Dólar Canadense',
+            data: this.historicValueFive,
+            borderColor: 'rgb(97, 104, 7)',
+            backgroundColor: 'rgb(137, 146, 13)',
             borderWidth: 5,
           },
         ]

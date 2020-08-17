@@ -1,8 +1,9 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   background-color: #ffffff;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
+  height: 4.2rem;
 }
 
 .currency-option {
@@ -11,11 +12,12 @@
   display: flex;
   color: black;
   font-weight: bolder;
+  line-height: 0.8rem;
 }
 
 .currency-option img {
-  width: 3.5rem;
-  height: 3.5rem;
+  /* width: 10%; */
+  height: 3rem;
   margin-right: 0.8rem;
   cursor: pointer;
 }
