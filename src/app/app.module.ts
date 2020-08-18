@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CalculateComponent],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

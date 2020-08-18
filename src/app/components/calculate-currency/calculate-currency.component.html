@@ -1,13 +1,13 @@
 <div class="container">
   <h3>Conversor de moedas</h3>
-  <div class="form__group field">
-    <input (keyup)="saveValue($event)" type="text" class="form__field" value="{{ resultReverse | currency }}"
-      placeholder="Name" name="names" id='names' required />
-    <label for="names" class="form__label">{{ initials }}</label>
+  <div class="form-group">
+    <input (keyup)="saveValue($event)" type="text" class="form-field" value="{{ resultReverse | currency}}"
+      placeholder="$" id='$' required />
+    <label for="$" class="form-label">{{ initials }}</label>
   </div>
-  <div class="form__group field">
-    <input (keyup)="saveValueReverse($event)" type="text" class="form__field" value="{{ result | currency: 'R$' }}"
-      placeholder="Name" name="name" id='name' required />
-    <label for="name" class="form__label">BRL:</label>
+  <div class="form-group">
+    <input (keyup)="saveValueReverse($event)" type="text" class="form-field" value="{{ result | currency}}"
+      placeholder="BRL" id='BRL' required />
+    <label for="BRL" class="form-label">BRL:</label>
   </div>
 </div>

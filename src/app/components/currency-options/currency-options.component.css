@@ -1,23 +1,21 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 20%);
   background-color: #ffffff;
   margin-bottom: 5rem;
-  height: 4.2rem;
 }
 
 .currency-option {
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   color: black;
   font-weight: bolder;
   line-height: 0.8rem;
 }
 
 .currency-option img {
-  /* width: 10%; */
-  height: 3rem;
+  height: 3em;
   margin-right: 0.8rem;
   cursor: pointer;
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ValueTransformer } from '@angular/compiler/src/util';
 import { CurrencyApiService } from '../../currency-api.service';
 
 @Component({
@@ -11,17 +10,17 @@ import { CurrencyApiService } from '../../currency-api.service';
 export class CalculateComponent implements OnInit {
 
   currencyData: any;
-  values: any = [];
+  values: Array<any> = [];
   valueInput: number;
-  valueInputReverse: number;
   result: number;
+  valueInputReverse: number;
   resultReverse: number;
   valueCurrency: number;
   initials: string = "$:";
 
   constructor(
     private _currencyApiService: CurrencyApiService,
-  ) { 
+  ) {
     this._currencyApiService.listen().subscribe((base: any) => {
       this.calcula(base);
     })
@@ -40,7 +39,6 @@ export class CalculateComponent implements OnInit {
   }
 
   calcula(event) {
-
     this._currencyApiService.getCurrency(event).subscribe(resposta => {
       this.currencyData = new Object(resposta)
       this.valueCurrency = this.currencyData.rates.BRL;
@@ -54,6 +52,10 @@ export class CalculateComponent implements OnInit {
       case 'EUR': this.initials = "EUR";
         break;
       case 'GBP': this.initials = "GBP";
+        break;
+      case 'JPY': this.initials = "JPY";
+        break;
+      case 'CAD': this.initials = "CAD";
         break;
     }
   }
