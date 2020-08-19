@@ -1,11 +1,11 @@
 .container {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.container h3 {
+.container h2 {
   margin: 0 auto;
   color: #ffffff;
   margin-bottom: 1rem;
@@ -13,14 +13,13 @@
 
 .form-group {
   position: relative;
-  padding: 15px 0 0;
-  margin-top: 10px;
-  width: 25%;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  width: 18%;
   margin: auto;
 }
 
 .form-field {
-  font-family: inherit;
   width: 100%;
   border: 0;
   border-bottom: 2px solid #ffffff;
@@ -39,7 +38,7 @@
 .form-field:placeholder-shown~.form-label {
   font-size: 1.3rem;
   cursor: text;
-  top: 20px;
+  top: 1rem;
 }
 
 .form-label {
@@ -52,7 +51,7 @@
 }
 
 .form-field:focus {
-  padding-bottom: 6px;
+  padding-bottom: 0.5rem;
   font-weight: 700;
   border-width: 3px;
   border-image: linear-gradient(to right, #b37c34, #7e0505);

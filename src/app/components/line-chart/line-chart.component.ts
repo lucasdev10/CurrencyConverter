@@ -63,53 +63,45 @@ export class LineChartComponent implements OnInit {
             label: 'Dólar',
             data: this.historicalValueUSD,
             borderColor: 'rgb(0, 0, 0)',
-            backgroundColor: 'rgb(71, 69, 66)',
-            borderWidth: 5,
           }, {
             label: 'Euro',
             data: this.historicalValueEUR,
             borderColor: 'rgb(13, 16, 212)',
-            backgroundColor: 'rgb(52, 44, 121)',
-            borderWidth: 5,
           },
           {
             label: 'Libra',
             data: this.historicalValueGBP,
             borderColor: 'rgb(173, 13, 13)',
-            backgroundColor: 'rgb(172, 67, 67)',
-            borderWidth: 5,
           },
           {
             label: 'Iene',
             data: this.historicalValueJPY,
             borderColor: 'rgb(6, 97, 29)',
-            backgroundColor: 'rgb(12, 131, 42)',
-            borderWidth: 5,
           },
           {
             label: 'Dólar Canadense',
             data: this.historicalValueCAD,
             borderColor: 'rgb(97, 104, 7)',
-            backgroundColor: 'rgb(137, 146, 13)',
-            borderWidth: 5,
           },
         ]
       },
       options: {
         legend: {
           labels: {
-            fontSize: 15,
+            fontSize: 13,
             fontColor: '#000',
           }
         },
         title: {
           fontColor: '#000',
-          fontSize: 25,
+          fontSize: 22,
           display: true,
           text: 'Histórico dos ultimos 6 dias'
         }
       }
     });
   }
+
+  
 
 }

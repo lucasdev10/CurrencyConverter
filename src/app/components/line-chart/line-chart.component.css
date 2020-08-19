@@ -1,6 +1,9 @@
 .chart {
   width: 50%;
+  height: 50%;
   margin: 2.5rem auto;
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+  border: 3px solid #000000;
 }
