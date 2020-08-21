@@ -15,7 +15,7 @@
   position: relative;
   padding: 1rem 0;
   margin-top: 1rem;
-  width: 18%;
+  width: 20%;
   margin: auto;
 }
 
@@ -66,4 +66,18 @@
   font-size: 1rem;
   color: white;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 500px) {
+  .container h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group {
+    position: relative;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    width: 30%;
+    margin: auto;
+  }
 }

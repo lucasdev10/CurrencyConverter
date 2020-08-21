@@ -7,3 +7,23 @@
   padding: 1.5rem;
   border: 3px solid #000000;
 }
+
+@media only screen and (max-width: 850px) {
+  .chart {
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .chart {
+    width: 70%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .chart {
+    display: none;
+  }
+}

@@ -23,3 +23,56 @@
 .currency-option img:hover {
   zoom: 1.2;
 }
+
+@media only screen and (max-width: 680px) {
+  .currency-option img {
+    height: 2.2rem;
+  }
+
+  .currency-option img:hover {
+    zoom: 1.1;
+  }
+
+  h6 {
+    font-size: 0.7rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+  .currency-option img {
+    margin-right: 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .currency-option img {
+    height: 1.8rem;
+  }
+
+  h6 {
+    font-size: 0.6rem;
+  }
+
+  p {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .currency-option img {
+    height: 1.5rem;
+  }
+
+  h6 {
+    font-size: 0.5rem;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+}
