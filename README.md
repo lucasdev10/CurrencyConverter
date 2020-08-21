@@ -1,5 +1,10 @@
 # ConversorMoedas
 
+## Este Projeto é um conversor de moedas, contendo cinco opções: Dólar Americano, Euro, Libra, Iene e Dólar Canadense. 
+## Para calcular, você deve clicar em uma das imagens na parte superior da tela.
+## Contém um gráfico que mostra o histórico dos ultimos seis dias com os valores de cada moeda.
+## Todos os dados são reais, consumidos de uma API externa.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
 ## Development server
